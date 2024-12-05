@@ -1,0 +1,30 @@
+<div class="O_header">
+  <h3>пузырик<h3>
+</div>
+
+<div class="Q_Background">
+</div>
+
+
+<div class="W_1">
+
+  <h1>but good shit<br>happens too</h1>
+  <p>создаем приложение — безопасное цифровое пространство, чтобы делать людей счастливее в&nbsp;моменте</p>
+  <div class="A_Button"></div>
+
+</div>
+
+<div class="W_2">
+</div>
+
+<ul>
+  <% @responses.each do |r| %>
+    <li><%= r.message %></li>
+  <% end %>
+</ul>
+
+<%= form_for @response do |form| %>
+  <%= form.text_field :email %>
+  <%= form.text_field :message %>
+  <%= form.submit 'Send', class: 'A_Button' %>
+<% end %>

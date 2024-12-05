@@ -1,0 +1,18 @@
+body {
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.Q_Background {
+  background-image: url('Q_Background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

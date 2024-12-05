@@ -3,8 +3,5 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get '/profile', to: 'pages#profile'
-  get '/search', to: 'pages#search'
-  get '/featured', to: 'pages#featured'
-  get '/lifetime', to: 'pages#lifetime'
+  resources :responses, only: [:create]
 end
