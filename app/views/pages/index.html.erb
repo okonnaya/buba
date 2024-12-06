@@ -2,29 +2,70 @@
   <h3>пузырик<h3>
 </div>
 
-<div class="Q_Background">
+<div class="C_main">
+  <div class="W_1">
+
+    <h1>but good shit<br>happens too</h1>
+    <h3>создаем приложение — безопасное цифровое пространство, чтобы делать людей счастливее в&nbsp;моменте</h3>
+    <div class="A_Button" onClick="document.getElementById('W_5').scrollIntoView({ behavior: 'smooth' });">  <p>узнать о запуске</p></div>
+    <div class="A_Svg A_svg1"></div>
+    <div class="A_Svg A_svg2"></div>
+  </div>
+
+  <div class="W_2">
+    <div class="A_Img A_Img1"></div>
+    <div class="A_Img A_Img2"></div>
+    <h1 class="head01">01</h1>
+    <div class="text01">если ты испытываешь перманентную тревогу и&nbsp;страх</div>
+    <h1 class="head02">02</h1>
+    <div class="text02">хорошие моменты просто проходят мимо</div>
+    <h1 class="head03">03</h1>
+    <div class="text03">хочется убежать и&nbsp;исчезнуть навсегда</div>
+  </div>
+
+  <div class="W_3">
+    <h1>мы&nbsp;верим, что&nbsp;хорошее случается</h1>
+    <div class="A_Svg A_svg3"></div>
+    <div class="A_Svg A_svg4"></div>
+  </div>
+
+  <div class="W_4">
+    <h1>мы поможем</h1>
+    <div class="C_text">
+      <div class="text01">замечать позитивные эмоции</div>
+      <div class="text02">сохранять их</div>
+      <div class="text03">вспоминать</div>
+    </div>
+    <div class="A_Img A_Img1"></div>
+    <div class="A_Img A_Img2"></div>
+    <div class="A_Img A_Img3"></div>
+    <div class="A_Img A_Img4"></div>
+  </div>
+
+
+  <div class="W_5" id="W_5">
+   <div class="C_Texts">
+    <% @responses.last(20).each do |r| %>
+      <div class="A_Text"><%= r.message %></div>
+    <% end %>
+    </div>
+   
+
+    <h1>расскажи, что&nbsp;тебя сегодня порадовало</h1>
+
+    <%= form_for @response do |form| %>
+      <%= form.text_field :email, placeholder: "name@email.com", class: "form-control", required: true %>
+
+      <div>
+         <%= form.text_field :message, placeholder: "вкусный кофе", class: "form-control", required: true %>
+        <button type="submit" class="A_Button">
+          <%= image_tag 'arrow.svg', alt: 'Submit' %>
+        </button>
+      </div>
+    <% end %>
+
+  </div>
+  <div class="O_Footer">
+    <p> карина р. 2024</p>
+  </div>
 </div>
-
-
-<div class="W_1">
-
-  <h1>but good shit<br>happens too</h1>
-  <p>создаем приложение — безопасное цифровое пространство, чтобы делать людей счастливее в&nbsp;моменте</p>
-  <div class="A_Button"></div>
-
-</div>
-
-<div class="W_2">
-</div>
-
-<ul>
-  <% @responses.each do |r| %>
-    <li><%= r.message %></li>
-  <% end %>
-</ul>
-
-<%= form_for @response do |form| %>
-  <%= form.text_field :email %>
-  <%= form.text_field :message %>
-  <%= form.submit 'Send', class: 'A_Button' %>
-<% end %>
