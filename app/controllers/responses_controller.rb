@@ -2,7 +2,7 @@ class ResponsesController < ApplicationController
   def create
     @response = Response.new(response_params)
     @response.save
-    redirect_to root_path
+    redirect_to root_path + '#W_5'
   end
 
   private
