@@ -13,7 +13,6 @@ html {
   height: 100%;
   /* overflow-x: hidden; */
 }
-
 h1,
 h2,
 h3,
@@ -95,6 +94,9 @@ p {
   align-items: center;
   gap: 50px;
   overflow-x: clip;
+}
+.W_1 {
+  padding-top: 200px;
 }
 .A_Button {
   transition: all 0.2s ease;

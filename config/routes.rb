@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  resources :responses, only: [:create]
+  resources :responses, only: [:create, :destroy]
 end

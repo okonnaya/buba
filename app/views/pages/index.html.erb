@@ -47,10 +47,20 @@
    <div class="C_Texts">
     <% @responses.last(20).each do |r| %>
       <div class="A_Text"><%= r.message %></div>
+
+      <% if @admin %>
+        <%= button_to "Удалить", response_path(r), method: :delete %>
+      <% end %>
     <% end %>
     </div>
 
     <h1>расскажи, что&nbsp;тебя сегодня порадовало</h1>
+
+    <% if @error %>
+      <div id="error-messages" class="error-messages">
+        <%= @error %>
+      </div>
+    <% end %>
 
     <%= form_for @response do |form| %>
       <%= form.text_field :email, placeholder: "name@email.com", class: "form-control", required: true %>
