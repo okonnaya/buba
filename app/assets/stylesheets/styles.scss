@@ -128,7 +128,6 @@ p {
   justify-content: center;
   align-items: center;
   p {
-    filter: blur(0.20000000298023224px);
     color: #fff;
     font-weight: 400;
     text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.2),
@@ -412,6 +411,7 @@ p {
     flex-wrap: wrap;
     .A_Text {
       color: white;
+      text-align: center;
       display: flex;
       padding: 20px 30px;
       align-items: center;
@@ -438,6 +438,10 @@ p {
   bottom: 0;
   left: 0;
   z-index: -1000;
+}
+.error-messages{
+  text-align: center;
+  color: white;
 }
 
 .O_Footer {
