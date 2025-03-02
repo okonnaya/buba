@@ -3,6 +3,10 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 * {
   margin: 0;
@@ -19,33 +23,83 @@ h3,
 p {
   color: white;
   text-align: center;
-  line-height: 90%;
+  line-height: 100%;
   margin: 0;
   font-weight: 300;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
 }
 h1 {
-  font-size: 132px;
-  font-weight: 500;
-  width: 70%;
+  color: #ff52b7;
+  text-align: center;
+  text-shadow: 0px 0px 26.3px #ff52b7;
+  font-family: 'Inter Tight';
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 93%; /* 111.6px */
 }
 
 h2 {
 }
 
 h3 {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 30px;
+  font-size: 24px;
+  color: #ff52b7;
+  text-align: center;
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104%; /* 52px */
 }
 
 p {
   font-size: 20px;
 }
 
+.backheaven {
+  display: block;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url('back.jpg');
+  background-size: cover;
+  &.back2 {
+    height: 90vh;
+    top: auto;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+}
+
 .O_header {
+  a {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    &:hover {
+      cursor: pointer;
+      p {
+        text-shadow: 0px 0px 6.7px rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
   h3 {
     padding-top: 1vh;
-    font-weight: 400;
+    color: #fff;
+  }
+  .box {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    .box2 {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      gap: 80px;
+    }
   }
   margin: 0;
   border: none;
@@ -101,69 +155,34 @@ p {
 .A_Button {
   transition: all 0.2s ease;
   display: flex;
-  border-radius: 100px;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(
-      274deg,
-      rgba(255, 125, 188, 0.2) 11.9%,
-      rgba(247, 43, 142, 0.2) 26.98%,
-      rgba(255, 125, 188, 0.2) 42.07%,
-      rgba(247, 43, 142, 0.2) 57.16%,
-      rgba(255, 125, 188, 0.2) 72.24%,
-      rgba(247, 43, 142, 0.2) 87.33%
-    ),
-    linear-gradient(
-      168deg,
-      rgba(251, 220, 255, 0.7) 10.09%,
-      rgba(253, 138, 206, 0) 66.22%
-    ),
-    rgba(255, 176, 214, 0.8);
-  background-blend-mode: overlay, normal, normal;
-  box-shadow: 2px 5px 3px 0px rgba(247, 43, 142, 0.8) inset,
-    0px -9px 26px 0px #f72b8e inset,
-    7px 9px 10px 0px rgba(255, 255, 255, 0.4) inset,
-    0px -11px 10.5px 2px rgba(255, 255, 255, 0.25) inset,
-    2px 10px 12.6px 0px rgba(247, 43, 142, 0.6);
-  padding: 20px 30px;
-  justify-content: center;
+  box-shadow: 0px 0px 12px 0px rgba(255, 82, 183, 0.6);
+  display: flex;
+  padding: 20px 24px;
   align-items: center;
+  gap: 6px;
+  border-radius: 300px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  background: #ff52b7;
   p {
     color: #fff;
     font-weight: 400;
-    text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.2),
-      0px 16px 26px rgba(207, 8, 105, 0.8);
   }
   &:hover {
     cursor: pointer;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(
-        274deg,
-        rgba(255, 125, 188, 0.2) 11.9%,
-        rgba(247, 43, 142, 0.2) 26.98%,
-        rgba(255, 125, 188, 0.2) 42.07%,
-        rgba(247, 43, 142, 0.2) 57.16%,
-        rgba(255, 125, 188, 0.2) 72.24%,
-        rgba(247, 43, 142, 0.2) 87.33%
-      ),
-      linear-gradient(
-        168deg,
-        rgba(251, 220, 255, 0.7) 10.09%,
-        rgba(253, 138, 206, 0) 66.22%
-      ),
-      rgba(255, 125, 188, 0.8);
-    background-blend-mode: overlay, normal, normal;
-    box-shadow: 2px 5px 3px 0px rgba(247, 43, 142, 0.8) inset,
-      0px -9px 26px 0px #f72b8e inset,
-      7px 9px 10px 0px rgba(255, 255, 255, 0.4) inset,
-      0px -11px 10.5px 2px rgba(255, 255, 255, 0.25) inset,
-      2px 10px 12.6px 0px rgba(247, 43, 142, 0.6);
+    box-shadow: 0px 0px 9.9px 0px #ff52b7;
     p {
-      text-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.2),
-        0px 16px 26px rgba(207, 8, 105, 0.8);
+      text-shadow: 0px 0px 6.7px rgba(255, 255, 255, 0.7);
     }
   }
 }
 .W_1 {
+  img {
+    margin-top: 100px;
+    max-width: 1440px;
+    width: 90vw;
+    border-radius: 80px;
+    box-shadow: 0px 9px 76.2px -4px rgba(24, 39, 75, 0.1);
+  }
   h3 {
     width: 700px;
   }
@@ -192,10 +211,16 @@ p {
   margin-top: 10vh;
   height: 800px;
   margin-bottom: 100px;
+  border-radius: 0px 0px 700px 700px;
+  background: #fff;
+  box-shadow: 0px 42px 68.7px 0px #fff inset,
+    0px -112px 100px 0px rgba(255, 82, 183, 0.4) inset;
   .head01,
   .head02,
   .head03 {
-    color: rgba(255, 255, 255, 0.5);
+    color: #dde6ee;
+    box-shadow: none;
+    text-shadow: none;
     display: block;
     position: relative;
     width: fit-content;
@@ -251,47 +276,11 @@ p {
       left: -100px;
     }
   }
-
-  .A_Img {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    transform: rotate(20deg);
-    flex-shrink: 0;
-    border-radius: 1000px;
-    background: url('cat1.png') lightgray 50% / cover no-repeat;
-    box-shadow: 0px 3.256px 57.872px 0px rgba(135, 150, 171, 0.46);
-    &.A_Img1 {
-      left: 15vw;
-      top: 250px;
-    }
-    &.A_Img2 {
-      background: url('cat2.png') lightgray 50% / cover no-repeat;
-      transform: rotate(-28deg);
-      right: 400px;
-      top: -24px;
-    }
-  }
 }
 .W_3 {
-  .A_Svg {
-    width: 40vw;
-    height: 40vw;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: -1;
-  }
-  .A_svg3 {
-    background-image: url('A_svg3.svg');
-    top: -30vh;
-    right: -20vh;
-  }
-  .A_svg4 {
-    background-image: url('A_svg4.svg');
-    top: 10vh;
-    left: -10vh;
+  img {
+    max-width: 1440px;
+    width: 90vw;
   }
 }
 .W_4 {
@@ -427,43 +416,21 @@ p {
 .C_main {
   position: relative;
 }
-
-.Q_Background {
-  display: block;
-  min-height: 100%;
-  max-width: 100vw;
-  object-fit: cover;
-  position: absolute;
-  margin: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1000;
-}
-.error-messages{
+.error-messages {
   text-align: center;
   color: white;
 }
 
 .O_Footer {
-  padding-top: 15vh;
+  padding-top: 25vh;
   height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 125, 188, 0) 0%,
-    #ff7dbc 100%
-  );
 }
 
-@media all and (min-width: 2083px) {
-  .Q_Background {
-    width: 100vw;
-  }
-}
 @media all and (max-width: 2200px) {
   .W_4 {
     height: 450px;
@@ -518,7 +485,24 @@ p {
 }
 
 @media all and (max-width: 1761px) {
+  .O_header {
+    .box {
+      width: 1080px;
+    }
+  }
+  h1 {
+    font-size: 70px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .W_1 {
+    img {
+      max-width: 1080px;
+    }
+  }
   .W_2 {
+    border-radius: 300px;
     & .head01,
     & .head02,
     & .head03 {
@@ -655,6 +639,22 @@ p {
   }
 }
 @media all and (max-width: 1200px) {
+  .O_header {
+    .box {
+      width: 900px;
+    }
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .W_1 {
+    img {
+      max-width: 900px;
+    }
+  }
   .W_2 {
     & .head01,
     & .head02,
@@ -844,6 +844,22 @@ p {
 }
 
 @media all and (max-width: 900px) {
+  .O_header {
+    .box {
+      width: 600px;
+    }
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .W_1 {
+    img {
+      max-width: 600px;
+    }
+  }
   .W_4 {
     height: 1000px;
   }
@@ -930,8 +946,16 @@ p {
   }
 }
 @media all and (max-width: 780px) {
-  h1 {
-    font-size: 90px;
+  .W_1 {
+    img {
+      margin-top: 20px;
+      height: 60vh;
+      object-fit: cover;
+      border-radius: 40px;
+    }
+  }
+  p {
+    font-size: 14px;
   }
   .W_1 {
     & .A_Svg {
@@ -1078,6 +1102,7 @@ p {
     & .text01,
     & .text03,
     & .text02 {
+      font-size: 20px;
       &.text03 {
         left: -50px;
       }
@@ -1104,26 +1129,11 @@ p {
       }
     }
   }
-  .W_1,
-  .W_2 {
-    h1 {
-      font-size: 130px;
-    }
-  }
-  h1 {
-    font-size: 80px;
-  }
 }
 
 @media (max-width: 605px) {
   .W_4 {
     height: 1200px;
-  }
-  .W_1,
-  .W_2 {
-    h1 {
-      font-size: 100px;
-    }
   }
   .W_1 {
     h3 {
@@ -1135,7 +1145,6 @@ p {
     .text03,
     .text02 {
       width: 350px;
-      font-size: 25px;
     }
   }
   .W_1 {
@@ -1162,9 +1171,6 @@ p {
       }
     }
   }
-  h1 {
-    font-size: 70px;
-  }
   .W_5 {
     & form {
       input {
@@ -1175,9 +1181,39 @@ p {
 }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 60px;
+  .backheaven {
+    height: 40vh;
   }
+  .backheaven.back2 {
+    height: 50vh;
+  }
+
+  .O_header {
+    .box {
+      justify-content: center;
+      .box2 {
+        display: none;
+      }
+    }
+  }
+  .W_1,
+  .W_2,
+  .W_3,
+  .W_4,
+  .W_5 {
+    padding-top: 100px;
+  }
+  .W_3 {
+    padding-top: 0px;
+    min-height: 300px;
+    height: 600px;
+    img {
+      width: 100vw;
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
+
   .W_5 {
     & form {
       input {
@@ -1195,24 +1231,17 @@ p {
     }
   }
   .W_4 {
-    & .C_text {
-      .text01,
-      .text02,
-      .text03 {
-        font-size: 25px;
-      }
-    }
-  }
-  .W_4 {
     height: 1300px;
   }
   .W_2 {
     & .text01,
     & .text03,
     & .text02 {
+      font-size: 14px;
       &.text01 {
         left: auto;
         top: -40px;
+        font-size: 14px;
       }
     }
   }
@@ -1236,7 +1265,8 @@ p {
     }
   }
   .W_2 {
-    height: 1400px;
+    height: 800px;
+    border-radius: 0 0 100px 100px;
   }
   .W_2 {
     & .text01,
@@ -1246,6 +1276,14 @@ p {
         left: auto;
         right: auto;
       }
+    }
+  }
+
+  .W_2 {
+    .text01,
+    .text03,
+    .text02 {
+      width: 260px;
     }
   }
   .W_2 {
@@ -1270,7 +1308,7 @@ p {
       .text01,
       .text02,
       .text03 {
-        width: 380px;
+        width: 260px;
       }
     }
   }
@@ -1283,12 +1321,6 @@ p {
   }
 }
 @media (max-width: 500px) {
-  .W_1,
-  .W_2 {
-    h1 {
-      font-size: 80px;
-    }
-  }
   .W_4 {
     & .A_Img {
       &.A_Img3 {
@@ -1308,22 +1340,10 @@ p {
       width: 300px;
     }
   }
-  h1 {
-    font-size: 50px;
-  }
 }
 @media (max-width: 500px) {
   .W_1 {
     padding-top: 100px;
-  }
-  .W_1,
-  .W_2 {
-    h1 {
-      font-size: 60px;
-    }
-  }
-  h3 {
-    font-size: 20px;
   }
   .W_1 {
     height: 900px;

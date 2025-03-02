@@ -1,20 +1,27 @@
+
 <div class="O_header">
-  <h3>пузырик</h3>
+  <div  class="box">
+    <h3>пузырик</h3>
+    <div  class="box2">
+      <a href = 'https://t.me/buba_app'> <h3>канал</h3> </a>
+      <a href = 'https://t.me/bubblebuba_bot'> <h3>бот</h3> </a>
+    </div>
+  </div>
 </div>
 
 <div class="C_main">
   <div class="W_1">
+  <div class="backheaven back1"></div>
 
-    <h1>but good shit<br>happens too</h1>
-    <h3>создаем приложение — безопасное цифровое пространство, чтобы делать людей счастливее в&nbsp;моменте</h3>
-    <div class="A_Button" onClick="document.getElementById('W_5').scrollIntoView({ behavior: 'smooth' });">  <p>узнать о запуске</p></div>
-    <div class="A_Svg A_svg1"></div>
-    <div class="A_Svg A_svg2"></div>
+    <h1>расскажи,<br>что хорошего было сегодня</h1>
+    <h3>создаем приложение&nbsp;&mdash; безопасное цифровое пространство, чтобы делать людей счастливее в&nbsp;моменте<br>
+    <br>
+    еще в&nbsp;конце тест на&nbsp;то, какое ты&nbsp;воспоминание</h3>
+    <div class="A_Button" onClick="document.getElementById('W_5').scrollIntoView({ behavior: 'smooth' });">  <p>хочу!</p></div>
+    <%= image_tag 'pic1.jpg' %>
   </div>
 
   <div class="W_2">
-    <div class="A_Img A_Img1"></div>
-    <div class="A_Img A_Img2"></div>
     <h1 class="head01">01</h1>
     <div class="text01">если ты испытываешь перманентную тревогу и&nbsp;страх</div>
     <h1 class="head02">02</h1>
@@ -24,60 +31,27 @@
   </div>
 
   <div class="W_3">
-    <h1>мы&nbsp;верим,<br>что&nbsp;хорошее случается</h1>
-    <div class="A_Svg A_svg3"></div>
-    <div class="A_Svg A_svg4"></div>
+    <h1>расскажем и&nbsp;покажем,<br>что&nbsp;хорошее уже&nbsp;есть</h1>
+    <h3>например, небо</h3>
+    <%= image_tag 'pic2.png' %>
   </div>
 
-  <div class="W_4">
-    <h1>мы поможем</h1>
-    <div class="C_text">
-      <div class="text01">замечать позитивные эмоции</div>
-      <div class="text02">сохранять их</div>
-      <div class="text03">вспоминать</div>
-    </div>
-    <div class="A_Img A_Img1"></div>
-    <div class="A_Img A_Img2"></div>
-    <div class="A_Img A_Img3"></div>
-    <div class="A_Img A_Img4"></div>
+  <div class="W_1" id = "W_5">
+    <h1>сохраняй уже&nbsp;сейчас</h1>
+    <h3>заходи в&nbsp;телеграм бота&nbsp;&mdash; там&nbsp;бесплатно тебя уже ждет тестик, какая ты&nbsp;эмоция и&nbsp;основной функицонал приложения<br></h3>
+    <%= image_tag 'pic3.jpg' %>
+    <a target="_blank" href="https://t.me/bubblebuba_bot">
+       <div class="A_Button">  <p>тык!</p></div>
+    </a>
+
+    <h1>и&nbsp;подписывайся на&nbsp;канал,<br>чтобы быть в&nbsp;курсе</h1>
+    <a target="_blank" href="https://t.me/buba_app">
+      <div class="A_Button">  <p>тык в канал!</p></div>
+    </a>
   </div>
 
-
-  <div class="W_5" id="W_5">
-   <div class="C_Texts">
-    <% @responses.last(20).each do |r| %>
-      <div class="A_Text"><%= r.message %></div>
-
-      <% if @admin %>
-        <%= button_to "Удалить", response_path(r), method: :delete %>
-      <% end %>
-    <% end %>
-    </div>
-
-    <h1>расскажи, что&nbsp;тебя сегодня порадовало</h1>
-
-    <% if @error %>
-      <div id="error-messages" class="error-messages">
-        <%= @error %>
-      </div>
-    <% end %>
-
-    <%= form_for @response do |form| %>
-      <%= form.text_field :email, placeholder: "name@email.com", class: "form-control", required: true %>
-
-      <div>
-         <%= form.text_field :message, placeholder: "вкусный кофе", class: "form-control", required: true %>
-        <button type="submit" class="A_Button">
-          <%= image_tag 'arrow.svg', alt: 'Submit' %>
-        </button>
-      </div>
-    <% end %>
-
-  </div>
   <div class="O_Footer">
-    <p> карина р. 2024</p>
+    <p> пузырик, 2024-2025</p>
   </div>
-
-  <%= image_tag 'Q_Background.png', class: 'Q_Background' %>
-
+  <div class="backheaven back2"></div>
 </div>
